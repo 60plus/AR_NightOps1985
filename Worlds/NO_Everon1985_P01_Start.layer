@@ -1,0 +1,83 @@
+$grp SCR_AIGroup : "{000CD338713F2B5A}Prefabs/AI/Groups/Group_Base.et" {
+ east_grp_1 {
+  components {
+   AIBehaviorTreeComponent "{13BAA835864B8992}" {
+   }
+  }
+  coords 11485.403 1.764 10903.764
+  m_faction "USSR"
+  m_aUnitPrefabSlots {
+   "{DCB41B3746FDD1BE}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_Rifleman.et" "{96C784C502AC37DA}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_MG.et"
+  }
+  m_aStaticWaypoints {
+   "east_grp_1_wp_c" "east_grp_1_wp_1" "east_grp_1_wp_2"
+  }
+  {
+   Vehicle east_veh_1 : "{259EE7B78C51B624}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469.et" {
+    components {
+     SCR_VehicleDamageManagerComponent "{141326E9FD94FE40}" {
+      m_fVehicleDestroyDamage 11880.1
+     }
+    }
+    coords -1.576 0.081 6.821
+    angleY 110.723
+   }
+   AIWaypointCycle east_grp_1_wp_c : "{35BD6541CBB8AC08}Prefabs/AI/Waypoints/AIWaypoint_Cycle.et" {
+    coords 1.346 0.405 5.42
+    CycleWaypoints {
+     "east_grp_1_wp_1" "east_grp_1_wp_2"
+    }
+   }
+   $grp SCR_AIWaypoint : "{750A8D1695BD6998}Prefabs/AI/Waypoints/AIWaypoint_Move.et" {
+    east_grp_1_wp_1 {
+     coords -23.993 4.387 29.638
+    }
+    east_grp_1_wp_2 {
+     coords 27.881 -0.859 -21.019
+    }
+   }
+  }
+ }
+ east_grp_2 {
+  components {
+   AIBehaviorTreeComponent "{13BAA835864B8992}" {
+   }
+  }
+  coords 11372.018 36.281 11021.222
+  m_faction "USSR"
+  m_aUnitPrefabSlots {
+   "{DCB41B3746FDD1BE}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_Rifleman.et" "{96C784C502AC37DA}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_MG.et"
+  }
+  m_aStaticWaypoints {
+   "east_grp_2_wp_1" "east_grp_2_wp_2"
+  }
+  m_aStaticVehicles {
+   "east_veh_02"
+  }
+  {
+   SCR_AIWaypoint east_grp_2_wp_2 : "{750A8D1695BD6998}Prefabs/AI/Waypoints/AIWaypoint_Move.et" {
+    coords 12.594 -2.428 1.765
+   }
+   SCR_BoardingWaypoint east_grp_2_wp_1 : "{B049D4C74FBC0C4D}Prefabs/AI/Waypoints/AIWaypoint_GetInNearest.et" {
+    coords 7.365 0.805 4.002
+   }
+   Vehicle east_veh_02 : "{C012BB3488BEA0C2}Prefabs/Vehicles/Wheeled/BTR70/BTR70.et" {
+    components {
+     SCR_VehicleDamageManagerComponent "{141326E9FD94FE40}" {
+      m_fVehicleDestroyDamage 22624.699
+     }
+    }
+    coords 7.794 -0.59 3.541
+    angleX -4.174
+    angleY 136.678
+   }
+  }
+ }
+}
+GenericEntity : "{4923E218F59644B9}Prefabs/Props/Wrecks/BoatWreck_01.et" {
+ coords 11590.32 0 10887.462
+ angleY -68
+}
+SCR_SpawnPoint : "{5A2220DD0C16958B}Prefabs/MP/Spawning/SpawnPoint_US.et" {
+ coords 11587.514 2.615 10881.521
+}

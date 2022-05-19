@@ -1,0 +1,35 @@
+SCR_AIGroup east_grp_3 : "{000CD338713F2B5A}Prefabs/AI/Groups/Group_Base.et" {
+ components {
+  AIBehaviorTreeComponent "{13BAA835864B8992}" {
+  }
+ }
+ coords 11379.533 69.71 11191.641
+ m_faction "USSR"
+ m_aUnitPrefabSlots {
+  "{DCB41B3746FDD1BE}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_Rifleman.et" "{96C784C502AC37DA}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_MG.et" "{1C78331E156A3D65}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_AT.et" "{612F43A4D5AE765F}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_RTO.et" "{976AC400219898FA}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_Sharpshooter.et" "{8E0FE664CE7D1CA9}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_GL.et"
+ }
+ m_aStaticWaypoints {
+  "east_grp_3_wp_1"
+ }
+ {
+  SCR_DefendWaypoint east_grp_3_wp_1 : "{93291E72AC23930F}Prefabs/AI/Waypoints/AIWaypoint_Defend.et" {
+   coords 3.807 -0.053 1.302
+  }
+ }
+}
+GenericEntity : "{76153B97A551AADE}Prefabs/Systems/Arsenal/AmmoBoxes/USSR/AmmoBoxArsenal_Explosives_USSR.et" {
+ coords 11382.074 69.407 11196.593
+}
+GenericEntity : "{7C93700E1AC4C388}Prefabs/Systems/Arsenal/AmmoBoxes/USSR/AmmoBoxArsenal_Launcher_USSR.et" {
+ coords 11382.063 69.407 11198.094
+ angleY 88.614
+}
+Vehicle east_veh_3 : "{C012BB3488BEA0C2}Prefabs/Vehicles/Wheeled/BTR70/BTR70.et" {
+ components {
+  SCR_VehicleDamageManagerComponent "{141326E9FD94FE40}" {
+   m_fVehicleDestroyDamage 22624.699
+  }
+ }
+ coords 11341.903 62.336 11222.842
+ angleY 77.253
+}

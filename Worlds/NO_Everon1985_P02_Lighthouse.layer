@@ -1,0 +1,83 @@
+GameEntity mrk_01 {
+ components {
+  SCR_MapDescriptorComponent "{5966A85FD28B6464}" {
+   DisplayName "Target"
+   MainType Target
+   Scale 2
+  }
+  RplComponent "{5966A85FCFA83C35}" {
+  }
+ }
+ coords 11411.378 69.407 11193.164
+}
+SCR_AIGroup east_grp_3 : "{000CD338713F2B5A}Prefabs/AI/Groups/Group_Base.et" {
+ components {
+  AIBehaviorTreeComponent "{13BAA835864B8992}" {
+  }
+ }
+ coords 11337.435 62.394 11222.133
+ m_faction "USSR"
+ m_aUnitPrefabSlots {
+  "{DCB41B3746FDD1BE}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_Rifleman.et" "{96C784C502AC37DA}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_MG.et" "{1C78331E156A3D65}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_AT.et" "{612F43A4D5AE765F}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_RTO.et" "{976AC400219898FA}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_Sharpshooter.et" "{8E0FE664CE7D1CA9}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_GL.et"
+ }
+ m_aStaticWaypoints {
+  "east_grp_3_wp_1"
+ }
+ {
+  SCR_DefendWaypoint east_grp_3_wp_1 : "{93291E72AC23930F}Prefabs/AI/Waypoints/AIWaypoint_Defend.et" {
+   coords 3.803 -0.01 1.301
+  }
+ }
+}
+Vehicle east_veh_3 : "{1BABF6B33DA0AEB6}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_command.et" {
+ components {
+  SCR_VehicleDamageManagerComponent "{141326E9FD94FE40}" {
+   m_fVehicleDestroyDamage 21809.699
+  }
+ }
+ coords 11381.66 69.407 11191.292
+ angleY -126.126
+ m_eVehicleType TRUCK
+}
+SCR_TriggerTask : "{28035CE77901DF88}PrefabsEditable/Tasks/E_MoveTask.et" {
+ components {
+  SCR_MapDescriptorComponent "{55D072570E7E8AB7}" {
+   Faction 1
+  }
+ }
+ coords 11494.955 2.429 10913.215
+ {
+  SCR_BaseFactionTriggerEntity {
+   ID "55D072570E7E8ABF"
+   m_sOwnerFactionKey "US"
+  }
+ }
+}
+SCR_BaseTriggerEntity east_grp_4_trg : "{3F294A5E2B52B65E}Prefabs/MP/Triggers/CoopTriggerSpawner.et" {
+ components {
+  SCR_AISpawnerComponent "{5966F2A840D93A01}" {
+   m_rnDefaultPrefab "{CB58D90EA14430AD}Prefabs/Groups/OPFOR/Group_USSR_SentryTeam.et"
+   m_vSpawnPosition 11384.521 69.406 11196.26
+   m_vSpawnRotation 0 87 0
+   m_aWaypointsList {
+    "east_grp_4_wp_1"
+   }
+   m_bEndGameOnEmpty 1
+  }
+ }
+ coords 11384.522 69.406 11196.26
+ SphereRadius 200
+ DrawShape 1
+ {
+  SCR_DefendWaypoint east_grp_4_wp_1 : "{93291E72AC23930F}Prefabs/AI/Waypoints/AIWaypoint_Defend.et" {
+   coords 0.312 0.296 -0.94
+  }
+ }
+}
+GenericEntity : "{76153B97A551AADE}Prefabs/Systems/Arsenal/AmmoBoxes/USSR/AmmoBoxArsenal_Explosives_USSR.et" {
+ coords 11382.074 69.407 11196.593
+}
+GenericEntity : "{7C93700E1AC4C388}Prefabs/Systems/Arsenal/AmmoBoxes/USSR/AmmoBoxArsenal_Launcher_USSR.et" {
+ coords 11382.063 69.407 11198.094
+ angleY 88.614
+}

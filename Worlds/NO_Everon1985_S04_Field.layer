@@ -1,0 +1,23 @@
+SCR_BaseTriggerEntity east_grp_4_trg : "{3F294A5E2B52B65E}Prefabs/MP/Triggers/CoopTriggerSpawner.et" {
+ components {
+  SCR_AISpawnerComponent "{5966F2A840D93A01}" {
+   m_rnDefaultPrefab "{96BAB56E6558788E}Prefabs/Groups/OPFOR/Group_USSR_Team_AT.et"
+   m_vSpawnPosition 11117.644 35.878 11577.163
+   m_vSpawnRotation 0 87 0
+   m_aWaypointsList {
+    "east_grp_4_wp_1"
+   }
+  }
+ }
+ coords 10852.136 -10.682 11046.893
+ angleY -22.935
+ TriggerShapeType "Oriented Bounding Box"
+ SphereRadius 100
+ BoxMaxs 1000 100 10
+ {
+  SCR_AIWaypoint east_grp_4_wp_1 : "{750A8D1695BD6998}Prefabs/AI/Waypoints/AIWaypoint_Move.et" {
+   coords 530.551 72.754 -31.216
+   angleY 22.935
+  }
+ }
+}
