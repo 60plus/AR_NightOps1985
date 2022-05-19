@@ -1,0 +1,24 @@
+GenericEntity : "{4923E218F59644B9}Prefabs/Props/Wrecks/BoatWreck_01.et" {
+ coords 11590.322 -0.48 10889.734
+ angleY -11.04
+ scale 1.767
+}
+SCR_SpawnPoint : "{5A2220DD0C16958B}Prefabs/MP/Spawning/SpawnPoint_US.et" {
+ coords 11587.514 2.615 10881.521
+ m_bShowInDeployMapOnly 1
+}
+GenericEntity : "{BE99D77D1155B127}Prefabs/Systems/Arsenal/ArsenalBoxes/US/ArsenalBox_US.et" {
+ coords 11590.062 0.002 10889.379
+ angleY -98.26
+ {
+  GenericEntity {
+   ID "58C4A255C2BC31D4"
+   {
+    GenericEntity {
+     ID "56B6871A278AB642"
+     coords 0 0 0
+    }
+   }
+  }
+ }
+}

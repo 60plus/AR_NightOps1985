@@ -1,0 +1,6 @@
+SCR_BaseGameMode CoopGameMode_Base1 : "{137CA336F7DFF561}Prefabs/MP/Modes/Coop/CoopGameMode_Base.et" {
+ coords 11524.12 22.409 10954.611
+}
+SCR_BaseGameMode CoopGameMode1 : "{904EC091C347AEA9}Prefabs/MP/Modes/Coop/CoopGameMode.et" {
+ coords 11522.286 16.566 10937.243
+}
