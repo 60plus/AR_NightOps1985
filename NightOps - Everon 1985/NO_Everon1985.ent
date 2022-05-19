@@ -4,7 +4,7 @@ SubScene {
 Layer default {
  Index 0
 }
-Layer Init {
+Layer Setup {
  Index 1
 }
 Layer P01_Village {
