@@ -1,0 +1,18 @@
+SubScene {
+ Parent "worlds/Eden/Eden.ent"
+}
+Layer default {
+ Index 0
+}
+Layer Init {
+ Index 1
+}
+Layer P01_Village {
+ Index 4
+}
+Layer P00_Start {
+ Index 2
+}
+Layer P02_Lighthouse {
+ Index 3
+}
