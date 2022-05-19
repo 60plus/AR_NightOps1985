@@ -1,0 +1,41 @@
+SCR_AIGroup east_grp_1 : "{000CD338713F2B5A}Prefabs/AI/Groups/Group_Base.et" {
+ components {
+  AIBehaviorTreeComponent "{13BAA835864B8992}" {
+  }
+ }
+ coords 11485.403 1.764 10903.764
+ m_faction "USSR"
+ m_aUnitPrefabSlots {
+  "{DCB41B3746FDD1BE}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_Rifleman.et" "{96C784C502AC37DA}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_MG.et"
+ }
+ m_aStaticWaypoints {
+  "east_grp_1_wp_c" "east_grp_1_wp_1" "east_grp_1_wp_2"
+ }
+ {
+  AIWaypointCycle east_grp_1_wp_c : "{35BD6541CBB8AC08}Prefabs/AI/Waypoints/AIWaypoint_Cycle.et" {
+   coords 1.346 0.405 5.42
+   CycleWaypoints {
+    "east_grp_1_wp_1" "east_grp_1_wp_2"
+   }
+  }
+  $grp SCR_AIWaypoint : "{750A8D1695BD6998}Prefabs/AI/Waypoints/AIWaypoint_Move.et" {
+   east_grp_1_wp_1 {
+    coords -11.368 0.087 -3.193
+    AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
+   }
+   east_grp_1_wp_2 {
+    coords 27.881 -0.162 -29.521
+    AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
+   }
+  }
+ }
+}
+Vehicle east_veh_1 : "{259EE7B78C51B624}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469.et" {
+ components {
+  SCR_VehicleDamageManagerComponent "{141326E9FD94FE40}" {
+   m_fVehicleDestroyDamage 11880.1
+  }
+ }
+ coords 11483.826 1.845 10910.585
+ angleY 110.723
+}
