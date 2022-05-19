@@ -1,0 +1,45 @@
+SCR_AIWorld : "{E0A05C76552E7F58}Prefabs/AI/SCR_AIWorld.et" {
+ components {
+  NavmeshWorldComponent "{5584F30E67F617AD}" {
+   NavmeshSettings NavmeshWorld "{50FC63BEBE3973C5}" {
+    NavmeshFile "{AD5F99CD7C59D5E0}worlds/GameMaster/Navmeshes/GM_Eden.nmn"
+   }
+  }
+ }
+ coords 6604.79 2.404 3149.247
+}
+PerceptionManager PerceptionManager1 : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
+ coords 6608.169 2.665 3151.011
+}
+SCR_BaseGameMode GameMode_Deathmatch_Selection1 : "{23B931640D22C50A}Prefabs/MP/Modes/Deathmatch/GameMode_Deathmatch_Selection.et" {
+ components {
+  SCR_RespawnMenuHandlerComponent "{56B49DB5C29DAB47}" {
+   m_bAllowFactionSelection 1
+   m_bAllowSpawnPointSelection 1
+   m_bAllowQuickDeploy 0
+  }
+ }
+ coords 11591.566 1.893 10874.252
+ {
+  TagManager : "{2FA9E172CAB1857A}Prefabs/MP/Managers/TagManager.et" {
+   coords 0 0 0
+  }
+  SCR_FactionManager FactionManager_USxUSSR1 : "{589540B35EBA8CDC}Prefabs/MP/Managers/Factions/FactionManager_USxUSSR.et" {
+   coords 0.001 0 0
+   Factions {
+    SCR_Faction "{56B2B46E9AF80999}" {
+     m_bIsPlayable 0
+    }
+   }
+  }
+  SCR_LoadoutManager : "{97EF4C1A41F63DDB}Prefabs/MP/Managers/Loadouts/LoadoutManager_USxUSSR.et" {
+   coords 0.001 0 0
+  }
+ }
+}
+TimeAndWeatherManagerEntity : "{A3BAF78F6F03315B}Prefabs/World/Game/TimeAndWeatherManager.et" {
+ coords 11383.269 69.407 11197.297
+ "Internal variant transition" 0
+ "Internal subvariant 0" 0
+ "Internal subvariant 1" 0
+}
