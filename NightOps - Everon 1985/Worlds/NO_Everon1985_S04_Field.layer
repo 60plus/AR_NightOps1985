@@ -1,3 +1,13 @@
+CommentEntity S04_comment_00 {
+ coords 11121.736 46.698 11547.695
+ angleY -90
+ Flags 2
+ m_Comment "Stage 04 - Field"
+ m_Size 2
+ m_Color 0.597 1 0.178
+ m_FaceCamera 1
+ m_VisibleOverall 1
+}
 SCR_BaseTriggerEntity east_grp_4_trg : "{3F294A5E2B52B65E}Prefabs/MP/Triggers/CoopTriggerSpawner.et" {
  components {
   SCR_AISpawnerComponent "{5966F2A840D93A01}" {
@@ -9,12 +19,21 @@ SCR_BaseTriggerEntity east_grp_4_trg : "{3F294A5E2B52B65E}Prefabs/MP/Triggers/Co
    }
   }
  }
- coords 10852.136 -10.682 11046.893
- angleY -22.935
+ coords 10820.223 -10.682 11160.776
+ angleY -8.576
  TriggerShapeType "Oriented Bounding Box"
  SphereRadius 100
- BoxMaxs 1000 100 10
+ BoxMaxs 1000 100 50
  {
+  CommentEntity S04_comment_01 {
+   coords 551.102 96.575 6.535
+   angleY -67.065
+   m_Comment "S04 Triggerline"
+   m_Size 5
+   m_Color 0.43 0.415 1
+   m_FaceCamera 1
+   m_VisibleOverall 1
+  }
   SCR_AIWaypoint east_grp_4_wp_1 : "{750A8D1695BD6998}Prefabs/AI/Waypoints/AIWaypoint_Move.et" {
    coords 530.551 72.754 -31.216
    angleY 22.935

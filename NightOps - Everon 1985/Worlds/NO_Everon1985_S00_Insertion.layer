@@ -1,3 +1,12 @@
+CommentEntity S00_comment_00 {
+ coords 11585.176 19.354 10882.976
+ angleY -90
+ m_Comment "Stage 00 - Insertion"
+ m_Size 2
+ m_Color 0.597 1 0.178
+ m_FaceCamera 1
+ m_VisibleOverall 1
+}
 GenericEntity : "{4923E218F59644B9}Prefabs/Props/Wrecks/BoatWreck_01.et" {
  coords 11590.322 -0.48 10889.734
  angleY -11.04
