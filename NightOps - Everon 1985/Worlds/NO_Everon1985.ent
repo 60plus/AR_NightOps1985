@@ -22,6 +22,9 @@ Layer Environment {
 Layer S05_Town {
  Index 6
 }
-Layer S04_Field {
+Layer S04_Farm {
  Index 7
+}
+Layer Objectives {
+ Index 8
 }

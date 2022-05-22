@@ -17,13 +17,8 @@ TimeAndWeatherManagerEntity : "{A3BAF78F6F03315B}Prefabs/World/Game/TimeAndWeath
 RadioManagerEntity RadioManager : "{B8E09FAB91C4ECCD}Prefabs/Radio/RadioManager.et" {
  coords 11518.022 0 10850.849
 }
-$grp SCR_FactionManager : "{E4075339B4E24E10}Prefabs/MP/Managers/Factions/CoopFactionManager.et" {
- CoopFactionManager1 {
-  coords 11412.965 -1 10750.601
- }
- FactionManager {
-  coords 10793.177 0 11043.443
- }
+SCR_FactionManager CoopFactionManager1 : "{E4075339B4E24E10}Prefabs/MP/Managers/Factions/CoopFactionManager.et" {
+ coords 11412.965 -1 10750.601
 }
 SCR_LoadoutManager LoadoutManager : "{0C4D399744D5B3FD}Prefabs/MP/Managers/Loadouts/CoopLoadoutManager.et" {
  coords 10793.177 0 11043.443
@@ -31,7 +26,7 @@ SCR_LoadoutManager LoadoutManager : "{0C4D399744D5B3FD}Prefabs/MP/Managers/Loado
   SCR_FactionPlayerLoadout "{5966E56D89B8567C}" {
    m_sLoadoutName "US Team Leader"
    m_sLoadoutResource "{E398E44759DA1A43}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_TL.et"
-   m_sLoadoutImage "{34E9DBD5693E1B7F}UI/Textures/EditorPreviews/Characters/BLUFOR/US_Army/Character_US_TL.edds"
+   m_sLoadoutImage "{E66FEBD3F049BF7D}UI/Textures/EditorPreviews/Characters/BLUFOR/US_Army/Character_US_SL.edds"
   }
   SCR_PlayerArsenalLoadout "{59672B222294C506}" {
    m_sLoadoutName "#AR-Loadout_Editor_NewArsenalLoadout_Name"
@@ -50,8 +45,8 @@ Vehicle east_veh_4 : "{4597626AF36C0858}Prefabs/Vehicles/Wheeled/Ural4320/Ural43
    m_fVehicleDestroyDamage 21809.699
   }
  }
- coords 11384.779 69.406 11191.714
- angleY -96.256
+ coords 11374.511 69.254 11194.383
+ angleY -58.256
 }
 SCR_MPDestructionManager DestructionManager : "{9BB369F2803C6F71}Prefabs/MP/MPDestructionManager.et" {
  coords 11403.623 -1 10744.366
