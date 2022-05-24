@@ -1,0 +1,109 @@
+CommentEntity S04_comment_00 {
+ coords 11121.736 46.698 11547.695
+ angleY -90
+ Flags 2
+ m_Comment "Stage 04 - Field"
+ m_Size 2
+ m_Color 0.597 1 0.178
+ m_FaceCamera 1
+ m_VisibleOverall 1
+}
+SCR_BaseTriggerEntity trg_spawnPoint_3 {
+ coords 11158.789 36.916 11592.447
+ userScript "  bool IsPlayer(IEntity ent)"\
+ "{"\
+ "  int playerId = GetGame().GetPlayerManager().GetPlayerIdFromControlledEntity(ent);"\
+ "  return playerId > 0;"\
+ "}"\
+ ""\
+ "    // Set up the filter"\
+ "    override bool ScriptedEntityFilterForQuery(IEntity ent) {"\
+ "        SCR_ChimeraCharacter cc = SCR_ChimeraCharacter.Cast(ent);"\
+ "        if (!cc) return false; // If the entity is not a person, filter it out"\
+ "        if (cc.GetFactionKey() != \"US\") return false; // If the entity does not have the Faction key of USSR, filter it out"\
+ "        if (!IsAlive(cc)) return false; // If the entity is dead, filter it out"\
+ "        if (!IsPlayer(cc)) return false; // If the entity is not a player, filter it out"\
+ "		"\
+ "		SCR_PopUpNotification.GetInstance().PopupMsg(\"TEST\");"\
+ "        return true; // Otherwise, include it!"\
+ "    }"
+ TriggerShapeType Sphere
+ SphereRadius 20
+ TriggerActivationType "All changes"
+ PeriodicQueries 1
+ UpdatePeriod 2
+}
+SCR_BaseTriggerEntity east_grp_4_trg : "{3F294A5E2B52B65E}Prefabs/MP/Triggers/CoopTriggerSpawner.et" {
+ components {
+  SCR_AISpawnerComponent "{5966F2A840D93A01}" {
+   m_rnDefaultPrefab "{96BAB56E6558788E}Prefabs/Groups/OPFOR/Group_USSR_Team_AT.et"
+   m_vSpawnPosition 11117.644 35.878 11577.163
+   m_vSpawnRotation 0 87 0
+   m_aWaypointsList {
+    "east_grp_4_wp_1"
+   }
+  }
+  SCR_AISpawnerComponent "{5968BAC9353FDA06}" {
+   m_rnDefaultPrefab "{96BAB56E6558788E}Prefabs/Groups/OPFOR/Group_USSR_Team_AT.et"
+   m_bUseTrigger 1
+   m_vSpawnPosition 11021.791 23.567 11458.632
+   m_aWaypointsList {
+    "east_grp_4_wp_1"
+   }
+  }
+  SCR_AISpawnerComponent "{596B54A4048760E8}" {
+   m_rnDefaultPrefab "{CB58D90EA14430AD}Prefabs/Groups/OPFOR/Group_USSR_SentryTeam.et"
+   m_bUseTrigger 1
+   m_vSpawnPosition 11136.427 35.878 11610.856
+   m_aWaypointsList {
+    "east_grp_4_wp_2"
+   }
+  }
+ }
+ coords 10820.223 -10.682 11160.776
+ angleY -8.576
+ userScript "	// only player and only controlled by US and only alive will fire the trigger"\
+ "  bool IsPlayer(IEntity ent)"\
+ "{"\
+ "  int playerId = GetGame().GetPlayerManager().GetPlayerIdFromControlledEntity(ent);"\
+ "  return playerId > 0;"\
+ "}"\
+ ""\
+ "    // Set up the filter"\
+ "    override bool ScriptedEntityFilterForQuery(IEntity ent) {"\
+ "        SCR_ChimeraCharacter cc = SCR_ChimeraCharacter.Cast(ent);"\
+ "        if (!cc) return false; // If the entity is not a person, filter it out"\
+ "        if (cc.GetFactionKey() != \"US\") return false; // If the entity does not have the Faction key of USSR, filter it out"\
+ "        if (!IsAlive(cc)) return false; // If the entity is dead, filter it out"\
+ "        if (!IsPlayer(cc)) return false; // If the entity is not a player, filter it out"\
+ "        return true; // Otherwise, include it!"\
+ "    }"
+ TriggerShapeType "Oriented Bounding Box"
+ SphereRadius 100
+ BoxMaxs 1000 100 50
+ UpdatePeriod 5
+ {
+  CommentEntity S04_comment_01 {
+   coords 551.102 96.575 6.535
+   angleY -67.065
+   m_Comment "S04 Triggerline"
+   m_Size 5
+   m_Color 0.43 0.415 1
+   m_FaceCamera 1
+   m_VisibleOverall 1
+  }
+  SCR_AIWaypoint east_grp_4_wp_1 : "{750A8D1695BD6998}Prefabs/AI/Waypoints/AIWaypoint_Move.et" {
+   coords 530.551 72.754 -31.216
+   angleY 22.935
+  }
+  SCR_DefendWaypoint east_grp_4_wp_2 : "{93291E72AC23930F}Prefabs/AI/Waypoints/AIWaypoint_Defend.et" {
+   coords 401.064 45.034 376.729
+   angleY 8.576
+   CompletionRadius 15
+  }
+ }
+}
+GenericEntity : "{68ED84218EA1BDC2}Prefabs/Compositions/Slotted/SlotFlatSmall/Antenna_S_USSR_01.et" {
+ coords 11160.849 33.522 11590.993
+ angleY -100.478
+}

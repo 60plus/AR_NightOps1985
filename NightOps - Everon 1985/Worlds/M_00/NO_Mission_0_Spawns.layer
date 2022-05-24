@@ -1,0 +1,27 @@
+PerceptionManager PerceptionManager1 : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
+ coords 6608.169 2.665 3151.011
+}
+SCR_BaseGameMode GameMode_Deathmatch_Selection1 : "{23B931640D22C50A}Prefabs/MP/Modes/Deathmatch/GameMode_Deathmatch_Selection.et" {
+ components {
+  SCR_RespawnMenuHandlerComponent "{56B49DB5C29DAB47}" {
+   m_bAllowFactionSelection 1
+   m_bAllowSpawnPointSelection 1
+   m_bAllowQuickDeploy 0
+  }
+ }
+ coords 6587.127 5.386 3124.651
+}
+SCR_FactionManager FactionManager_USxUSSR1 : "{589540B35EBA8CDC}Prefabs/MP/Managers/Factions/FactionManager_USxUSSR.et" {
+ coords 6583.717 5.386 3124.547
+ Factions {
+  SCR_Faction "{56B2B46E9AF80999}" {
+   m_bIsPlayable 0
+  }
+ }
+}
+SCR_SpawnPoint : "{5A2220DD0C16958B}Prefabs/MP/Spawning/SpawnPoint_US.et" {
+ coords 6587.307 5.386 3124.674
+}
+SCR_LoadoutManager : "{97EF4C1A41F63DDB}Prefabs/MP/Managers/Loadouts/LoadoutManager_USxUSSR.et" {
+ coords 6587.007 5.386 3125.063
+}

@@ -1,0 +1,9 @@
+SubScene {
+ Parent "worlds/Eden/Eden.ent"
+}
+Layer Objectives {
+ Index 8
+}
+Layer Init {
+ Index 5
+}
