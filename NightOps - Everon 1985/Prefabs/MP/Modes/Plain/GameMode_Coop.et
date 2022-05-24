@@ -1,0 +1,15 @@
+SCR_BaseGameMode : "{0F307326459A1395}Prefabs/MP/Modes/GameMode_Base.et" {
+ ID "56B2B479C6B96951"
+ components {
+  SCR_ForceTimeAndWeatherComponent "{5970F21329622CEB}" {
+  }
+  SCR_RespawnBriefingComponent "{596EA9593964C7F0}" {
+  }
+  SCR_RespawnMenuHandlerComponent "{596EA9592F5E8601}" {
+   m_bAllowFactionChange 0
+   m_bAllowQuickDeploy 0
+  }
+  SCR_RespawnTimerComponent "{596EA95926487BA9}" {
+  }
+ }
+}

@@ -1,0 +1,56 @@
+SCR_AIWorld : "{E0A05C76552E7F58}Prefabs/AI/SCR_AIWorld.et" {
+ components {
+  NavmeshWorldComponent "{5584F30E67F617AD}" {
+   NavmeshSettings NavmeshWorld "{50FC63BEBE3973C5}" {
+    NavmeshFile "{AD5F99CD7C59D5E0}worlds/GameMaster/Navmeshes/GM_Eden.nmn"
+   }
+  }
+ }
+ coords 0 0 0
+}
+GenericWorldFogEntity Fog_Haze2 {
+ coords 22.274 0 -29.957
+ FakeDistFog 1
+ HeightDensity 0.94
+ DistanceDensity 0.362
+ HeightOffset 0
+ Color 0.5 0.5 0.5 0
+ ColorBack 0.4 0.4 0.4 0
+}
+PerceptionManager PerceptionManager1 : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
+ coords 6443.401 2.665 2964.309
+}
+TagManager : "{2FA9E172CAB1857A}Prefabs/MP/Managers/TagManager.et" {
+ coords 11426.798 1.893 10687.55
+}
+SCR_BaseGameMode GameMode_Coop1 : "{986C258C450B9318}Prefabs/MP/Modes/Plain/GameMode_Coop.et" {
+ components {
+  SCR_ForceTimeAndWeatherComponent "{5970F21329622CEB}" {
+   m_fCustomTimeOfTheDay 19
+  }
+ }
+ coords -187.178 0 -142.063
+}
+RadioManagerEntity RadioManager : "{B8E09FAB91C4ECCD}Prefabs/Radio/RadioManager.et" {
+ coords 11353.255 0 10664.146
+}
+SCR_FactionManager CoopFactionManager1 : "{E4075339B4E24E10}Prefabs/MP/Managers/Factions/CoopFactionManager.et" {
+ coords -167.435 0 -184.442
+}
+ScriptedChatEntity ChatEntity : "{F69BC912AC8236F9}Prefabs/MP/ScriptedChatEntity.et" {
+ coords -168.601 -8.693 -158.253
+}
+SCR_MPDestructionManager DestructionManager : "{9BB369F2803C6F71}Prefabs/MP/MPDestructionManager.et" {
+ coords 11238.855 -1 10557.664
+}
+SCR_CoopTaskManager TaskManager : "{BA79FF1D825A3F3A}Prefabs/MP/Managers/Tasks/CoopTaskManager.et" {
+ coords 10919.575 24.888 11707.892
+ m_aSupportedTaskTypes {
+  SCR_EliminateTaskSupportClass "{5968C9C362B1A0E9}" {
+   m_TaskPrefab "{B866318EB7E84833}Prefabs/Tasks/EliminateTask.et"
+  }
+ }
+}
+SCR_LoadoutManager : "{D0DE5EFEE00509C9}Prefabs/MP/Managers/Loadouts/LoadoutManager_Coop.et" {
+ coords -164.223 0 -187.36
+}
