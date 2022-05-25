@@ -1,0 +1,99 @@
+$grp SCR_EditorTask : "{3AD0A1257870E6C7}Prefabs/Tasks/CustomTask.et" {
+ obj_primaryTsk_1 {
+  coords 10907.439 24.538 11737.405
+  m_sName "Capture Com Truck"
+  m_sDescription "Capture the Soviet Com Truck to win the mission"
+  m_bNotifyAssignment 1
+ }
+ obj_secondaryTsk_2 {
+  coords 11383.706 69.407 11193.036
+  m_sName "Secure Lighthouse"
+  m_sDescription "SECONDARY: Secure the Lighthouse  to unlock another spawn position"
+  m_sMapIconName "Task_Seize"
+  m_sTaskListIconName "Task_Seize"
+  m_bNotifyAssignment 1
+  {
+   SCR_FactionControlTriggerEntity trg_secondaryTsk_2 {
+    coords 3.274 0 3.9
+    TriggerShapeType Sphere
+    SphereRadius 50
+    TriggerActivationType "First change"
+    PeriodicQueries 1
+    ClassFilter "ChimeraCharacter"
+    OnActivate ""\
+    ""\
+    "		SCR_HintManagerComponent hintComponent = SCR_HintManagerComponent.GetInstance();"\
+    "		hintComponent.ShowCustomHint(\"New Spawnpoint at the LIGHTHOUSE unlocked\", \"NEW SPAWNPOINT\", 10);"\
+    "		"\
+    "		SCR_SpawnPoint.Cast(GetWorld().FindEntityByName(\"spawnPoint_2\")).SetFactionKey(\"US\"); //Changes the preplaced (attached to a vehicle) spawnpoint's factionkey from \"0\" (as inactive) to \"US\"."\
+    "		"\
+    "		//SCR_TriggerTask task = SCR_TriggerTask.Cast(GetWorld().FindEntityByName(\"obj_secondaryTsk_2\"));"\
+    "		//task.Finish();"\
+    "		//GetTaskManager().FinishTask(task);"\
+    "	"
+    m_sOwnerFactionKey "US"
+    m_fFriendlyRatioLimit 1
+   }
+  }
+ }
+ obj_secondaryTsk_3 {
+  coords 11156.204 31.992 11594.38
+  m_sName "Secure Radio Uplink"
+  m_sDescription "SECONDARY: Secure the Radio Uplink to unlock another spawn position"
+  m_sMapIconName "Task_Seize"
+  m_sTaskListIconName "Task_Seize"
+  m_bNotifyAssignment 1
+  {
+   SCR_FactionControlTriggerEntity trg_secondaryTsk_3 {
+    coords 3.274 0 3.898
+    TriggerShapeType Sphere
+    SphereRadius 50
+    TriggerActivationType "First change"
+    PeriodicQueries 1
+    ClassFilter "ChimeraCharacter"
+    OnActivate ""\
+    ""\
+    "		SCR_HintManagerComponent hintComponent = SCR_HintManagerComponent.GetInstance();"\
+    "		hintComponent.ShowCustomHint(\"New Spawnpoint at the RADIO UPLINK unlocked\", \"NEW SPAWNPOINT\", 10);"\
+    "		"\
+    "		SCR_SpawnPoint.Cast(GetWorld().FindEntityByName(\"spawnPoint_3\")).SetFactionKey(\"US\"); //Changes the preplaced (attached to a vehicle) spawnpoint's factionkey from \"0\" (as inactive) to \"US\"."\
+    "		"\
+    "	//	SCR_TriggerTask task = SCR_TriggerTask.Cast(GetWorld().FindEntityByName(\"trg_secondaryTsk_2\"));"\
+    "	//	GetTaskManager().FinishTask(task);"\
+    "	"
+    m_sOwnerFactionKey "US"
+    m_fFriendlyRatioLimit 1
+   }
+  }
+ }
+}
+SCR_TriggerTask obj_secondaryTsk_1 : "{7259F0B101761BD5}Prefabs/Tasks/MoveTask.et" {
+ coords 11372.521 17.354 11831.726
+ m_sName "Claim APC (Mobile Spawnpoint)"
+ m_sDescription "SECONDARY: Claim the empty APC to deploy a mobile spawnpoint."
+ m_eAssignMessage NONE
+ m_eUnassignMessage NONE
+ {
+  SCR_BaseFactionTriggerEntity trg_secondaryTsk_1 {
+   ID "55D072570E7E8ABF"
+   SphereRadius 2
+   ShapeColor 0.502 0 0 0.392
+   TriggerActivationType "First change"
+   UpdatePeriod 3
+   OnActivate ""\
+   "		SCR_HintManagerComponent hintComponent = SCR_HintManagerComponent.GetInstance();"\
+   "		hintComponent.ShowCustomHint(\"This is a unique APC which attaches a mobile spawnpoint to it as long as the vehicle stays alive.\", \"Moving Spawnpoint\", 30);"\
+   "		"\
+   "		SCR_SpawnPoint.Cast(GetWorld().FindEntityByName(\"spawnPoint_1\")).SetFactionKey(\"US\"); //Changes the preplaced (attached to a vehicle) spawnpoint's factionkey from \"0\" (as inactive) to \"US\"."\
+   "		"\
+   "	"
+   m_sOwnerFactionKey "US"
+  }
+ }
+}
+SCR_EliminateTask obj_primaryTsk_2 : "{B866318EB7E84833}Prefabs/Tasks/EliminateTask.et" {
+ coords 10907.439 24.538 11737.405
+ m_sName "Radio Truck must survive"
+ m_sDescription "PRIMARY: If the Radio Truck gets destroyed by any means, the mission fails"
+ m_fRange 1
+}

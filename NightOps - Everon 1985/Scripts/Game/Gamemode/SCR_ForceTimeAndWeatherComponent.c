@@ -1,3 +1,6 @@
+//Custom script by Zeal, based on ex0's C&H variant
+//Modified and adjusted by Biscuit
+
 [ComponentEditorProps(category: "GameScripted/GameMode", description: "Forced time and weather controller.")]
 class SCR_ForceTimeAndWeatherComponentClass : SCR_BaseGameModeComponentClass
 {
@@ -26,7 +29,7 @@ class SCR_ForceTimeAndWeatherComponent : SCR_BaseGameModeComponent
 	protected bool m_bUseCustomTime;
 
 	//! Time of the day set on game start. Authority only.
-	[Attribute(defvalue: "18", desc: "Time of the day set on game start. Authority only.", category: "CaptureAndHold: Environment", params: "0 24 0.01")]
+	[Attribute(defvalue: "20", desc: "Time of the day set on game start. Authority only.", category: "CaptureAndHold: Environment", params: "0 24 0.01")]
 	protected float m_fCustomTimeOfTheDay;
 
 	//------------------------------------------------------------------------------------------------

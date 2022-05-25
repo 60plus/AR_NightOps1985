@@ -204,25 +204,18 @@ class SCR_AISpawnerComponent : ScriptComponent
 
 		Or just inherit (extend) the trigger and get the proper callbacks
 		*/
-		
-
 
 		// Spawn when whatever enters this trigger
 		if (!IsSpawned())
 		{
-			
-			
-			
-				if (DoSpawnDefault())
-				{
-					// Once the group is spawned, in this case let's just disable the
-					// trigger, making it a complete one-shot
-					GenericEntity.Cast(GetOwner()).Deactivate();
-					// Additionally we could just RplComponent.DeleteEntity(GetOwner(), false);
-		
+			if (DoSpawnDefault())
+			{
+				// Once the group is spawned, in this case let's just disable the
+				// trigger, making it a complete one-shot
+				GenericEntity.Cast(GetOwner()).Deactivate();
+				// Additionally we could just RplComponent.DeleteEntity(GetOwner(), false);
 			}
 		}
-		
 	}
 
 	//------------------------------------------------------------------------------------------------

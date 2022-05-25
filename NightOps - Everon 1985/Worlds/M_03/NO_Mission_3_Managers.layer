@@ -1,0 +1,26 @@
+PerceptionManager PerceptionManager1 : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
+ coords 6443.401 2.665 2964.309
+}
+TagManager : "{2FA9E172CAB1857A}Prefabs/MP/Managers/TagManager.et" {
+ coords 11426.798 1.893 10687.55
+}
+RadioManagerEntity RadioManager : "{B8E09FAB91C4ECCD}Prefabs/Radio/RadioManager.et" {
+ coords 11353.255 0 10664.146
+}
+SCR_FactionManager CoopFactionManager1 : "{E4075339B4E24E10}Prefabs/MP/Managers/Factions/CoopFactionManager.et" {
+ coords -167.435 0 -184.442
+}
+SCR_MPDestructionManager DestructionManager : "{9BB369F2803C6F71}Prefabs/MP/MPDestructionManager.et" {
+ coords 11238.855 -1 10557.664
+}
+SCR_CoopTaskManager TaskManager : "{BA79FF1D825A3F3A}Prefabs/MP/Managers/Tasks/CoopTaskManager.et" {
+ coords 10919.575 24.888 11707.892
+ m_aSupportedTaskTypes {
+  SCR_EliminateTaskSupportClass "{5968C9C362B1A0E9}" {
+   m_TaskPrefab "{B866318EB7E84833}Prefabs/Tasks/EliminateTask.et"
+  }
+ }
+}
+SCR_LoadoutManager : "{D0DE5EFEE00509C9}Prefabs/MP/Managers/Loadouts/LoadoutManager_Coop.et" {
+ coords -164.223 0 -187.36
+}

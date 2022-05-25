@@ -1,0 +1,39 @@
+CommentEntity S00_comment_00 {
+ coords 11585.176 19.354 10882.976
+ angleY -90
+ m_Comment "Stage 00 - Insertion"
+ m_Size 2
+ m_Color 0.597 1 0.178
+ m_FaceCamera 1
+ m_VisibleOverall 1
+}
+SCR_FactionControlTriggerEntity trg_TitlePopup {
+ coords 11580.421 7.246 10881.127
+ TriggerShapeType Sphere
+ SphereRadius 20
+ TriggerActivationType "First change"
+ PeriodicQueries 1
+ UpdatePeriod 10
+ ClassFilter "ChimeraCharacter"
+ OnActivate ""\
+ ""\
+ "		SCR_PopUpNotification.GetInstance().PopupMsg(\"MISSION 1 - Flashpoint 1985\", duration: 10);"\
+ "		"\
+ "	"
+ m_sOwnerFactionKey "US"
+ m_fFriendlyRatioLimit 1
+}
+GenericEntity boat : "{4923E218F59644B9}Prefabs/Props/Wrecks/BoatWreck_01.et" {
+ components {
+ }
+ coords 11590.322 -0.48 10889.734
+ angleY -11.04
+ scale 1.767
+}
+SCR_SpawnPoint spawnPoint_0 : "{5A2220DD0C16958B}Prefabs/MP/Spawning/SpawnPoint_US.et" {
+ coords 11586.85 3.033 10880.752
+ m_fSpawnRadius 3
+ m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
+  Name "Insertion"
+ }
+}

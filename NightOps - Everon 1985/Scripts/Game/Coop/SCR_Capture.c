@@ -1,3 +1,5 @@
+//Custom script by Zeal to win the mission once the action is used
+
 class SCR_CaptureVehicle : ScriptedUserAction
 {
 	
