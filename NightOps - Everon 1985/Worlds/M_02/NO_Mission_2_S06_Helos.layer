@@ -1,0 +1,9 @@
+CommentEntity S06_comment_00 {
+ coords 6049.601 123.59 5372.917
+ angleY -90
+ m_Comment "Stage 06 - Helos"
+ m_Size 5
+ m_Color 0.597 1 0.178
+ m_FaceCamera 1
+ m_VisibleOverall 1
+}

@@ -1,0 +1,31 @@
+SCR_AIWorld : "{E0A05C76552E7F58}Prefabs/AI/SCR_AIWorld.et" {
+ components {
+  NavmeshWorldComponent "{5584F30E67F617AD}" {
+   NavmeshSettings NavmeshWorld "{50FC63BEBE3973C5}" {
+    NavmeshFile "{AD5F99CD7C59D5E0}worlds/GameMaster/Navmeshes/GM_Eden.nmn"
+   }
+  }
+ }
+ coords -6.748 0 15.096
+}
+GenericWorldFogEntity Fog_Haze2 {
+ coords 15.526 0 -14.861
+ FakeDistFog 1
+ HeightDensity 0.94
+ DistanceDensity 0.362
+ HeightOffset 0
+ Color 0.5 0.5 0.5 0
+ ColorBack 0.4 0.4 0.4 0
+}
+SCR_BaseGameMode GameMode_Coop1 : "{986C258C450B9318}Prefabs/MP/Modes/Plain/GameMode_Coop.et" {
+ components {
+  SCR_ForceTimeAndWeatherComponent "{5970F21329622CEB}" {
+   m_sCustomWeatherId "Clear"
+   m_fCustomTimeOfTheDay 23
+  }
+ }
+ coords -193.926 0 -126.967
+}
+ScriptedChatEntity ChatEntity : "{F69BC912AC8236F9}Prefabs/MP/ScriptedChatEntity.et" {
+ coords -175.349 -8.693 -143.157
+}

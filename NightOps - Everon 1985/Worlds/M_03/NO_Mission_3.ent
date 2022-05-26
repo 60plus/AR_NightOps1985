@@ -1,0 +1,27 @@
+SubScene {
+ Parent "worlds/Eden/Eden.ent"
+}
+Layer Objectives {
+ Index 3
+}
+Layer Init {
+ Index 1
+}
+Layer Managers {
+ Index 2
+}
+Layer S00_Start {
+ Index 0
+}
+Layer S01_Ambush {
+ Index 4
+}
+Layer S02_Rendevouzs {
+ Index 5
+}
+Layer S03_Powerstation {
+ Index 6
+}
+Layer S04_Headquarter {
+ Index 7
+}

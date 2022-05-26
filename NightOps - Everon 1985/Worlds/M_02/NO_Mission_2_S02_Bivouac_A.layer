@@ -1,0 +1,9 @@
+CommentEntity S02_comment_00 {
+ coords 7974.757 275.622 2578.904
+ angleY -90
+ m_Comment "Stage 02 - Bivouac A"
+ m_Size 5
+ m_Color 0.597 1 0.178
+ m_FaceCamera 1
+ m_VisibleOverall 1
+}
