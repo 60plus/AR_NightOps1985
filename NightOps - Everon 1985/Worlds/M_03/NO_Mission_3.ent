@@ -10,6 +10,18 @@ Layer Init {
 Layer Managers {
  Index 2
 }
-Layer S00_Insertion {
+Layer S00_Start {
  Index 0
+}
+Layer S01_Ambush {
+ Index 4
+}
+Layer S02_Rendevouzs {
+ Index 5
+}
+Layer S03_Powerstation {
+ Index 6
+}
+Layer S04_Headquarter {
+ Index 7
 }

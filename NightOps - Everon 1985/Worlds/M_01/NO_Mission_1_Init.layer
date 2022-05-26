@@ -41,6 +41,32 @@ SCR_BaseGameMode GameMode_Coop1 : "{986C258C450B9318}Prefabs/MP/Modes/Plain/Game
     }
    }
   }
+  SCR_RespawnBriefingComponent "{596EA9593964C7F0}" {
+   m_aGameModeHints {
+    SCR_HintUIInfo "{5974743A23D9CC7C}" {
+     Name "Hint: Do Bonus Tasks"
+     Description "Do secondary objectives to unlock more spawn positions or other advantages."
+     Icon "{3C50D67D082BA322}UI/Textures/DeployMenu/Briefing/conflict_HintBanner_2_UI.edds"
+    }
+    SCR_UIInfo "{5974743B3649D920}" {
+     Name "Hint: Avoid roadblocks"
+     Description "Enemy roadblocks are often reinforced with armed vehicles. Be aware!"
+     Icon "{324E923535DCACF8}UI/Textures/DeployMenu/Briefing/conflict_HintBanner_1_UI.edds"
+    }
+    SCR_UIInfo "{5974743B4C5E05EC}" {
+     Name "Watch for patrols"
+     Description "Enemy patrols might ambush you all over the island. "
+     Icon "{39A515BAE3795994}UI/Textures/DeployMenu/Briefing/conflict_HintBanner_3_UI.edds"
+    }
+   }
+   m_aWinConditions {
+    SCR_BriefingVictoryCondition "{5974743ADCF90352}" {
+     victoryCondition SEIZE_RELAY
+     name "Capture Com Truck"
+     description "Capture the Soviet Com Truck before the assault on Everon begins"
+    }
+   }
+  }
  }
  coords 22.528 0 -30.243
 }

@@ -6,10 +6,9 @@ class SCR_CaptureVehicle : ScriptedUserAction
 	override void PerformAction(IEntity pOwnerEntity, IEntity pUserEntity)
 		{
 		
-		//SCR_EditorTask task = SCR_EditorTask.Cast(pOwnerEntity.GetWorld().FindEntityByName("obj_primaryTsk_1"));
-		//GetTaskManager().FinishTask(task);
-		
-		
+		SCR_BaseTask task = SCR_BaseTask.Cast(GetGame().GetWorld().FindEntityByName("obj_primaryTsk_1"));
+		task.Finish();
+		GetTaskManager().FinishTask(task);
 	
 		SCR_PopUpNotification.GetInstance().PopupMsg("COM TRUCK CAPTURED", duration: 5);
 		

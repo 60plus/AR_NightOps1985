@@ -655,31 +655,6 @@ Vehicle east_veh_5 : "{1BABF6B33DA0AEB6}Prefabs/Vehicles/Wheeled/Ural4320/Ural43
    m_TextBackground 1
    m_BackgroundColor 0.938 0.024 0.004
   }
-  GenericEntity DestroyTruckLogic {
-   coords 203.164 -4.907 -7.594
-   angleY 126.126
-   userScript "	// code here"
-   constructor ""\
-   "		SetEventMask(EntityEvent.INIT);"\
-   "	"
-   EOnInit ""\
-   "		SCR_EliminateTask task = SCR_EliminateTask.Cast(GetWorld().FindEntityByName(\"obj_primaryTsk_2\"));"\
-   "		if (task)"\
-   "		{"\
-   "			task.GetOnEliminatedInvoker().Insert(OnTaskComplete);"\
-   "		}"\
-   "	}"\
-   "	"\
-   "	void OnTaskComplete(SCR_BaseTask task) "\
-   "	{"\
-   "		SCR_PopUpNotification.GetInstance().PopupMsg(\"RADIO TRUCK DESTROYED\");"\
-   "		"\
-   "		 SCR_BaseGameMode gameMode = SCR_BaseGameMode.Cast(GetGame().GetGameMode()); // Get the game mode for the end script"\
-   "        Faction faction = GetGame().GetFactionManager().GetFactionByKey(\"USSR\"); // Get the winning faction Key"\
-   "        int usIndex = GetGame().GetFactionManager().GetFactionIndex(faction); // Get the winning faction key's index"\
-   "        gameMode.EndGameMode(SCR_GameModeEndData.CreateSimple(SCR_GameModeEndData.ENDREASON_EDITOR_FACTION_VICTORY, -1, usIndex)); // End the mission!"\
-   "	"
-  }
  }
 }
 Vehicle east_veh_6 : "{259EE7B78C51B624}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469.et" {
@@ -755,7 +730,7 @@ SCR_BaseTriggerEntity east_grp_6_trg : "{3F294A5E2B52B65E}Prefabs/MP/Triggers/Co
  "        if (!IsPlayer(cc)) return false; // If the entity is not a player, filter it out"\
  "        return true; // Otherwise, include it!"\
  "    }"
- SphereRadius 200
+ SphereRadius 295.4
  UpdatePeriod 5
  {
   AIWaypointCycle east_grp_6_wp_c : "{35BD6541CBB8AC08}Prefabs/AI/Waypoints/AIWaypoint_Cycle.et" {
