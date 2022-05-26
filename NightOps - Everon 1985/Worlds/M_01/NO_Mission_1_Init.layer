@@ -20,7 +20,7 @@ GenericWorldFogEntity Fog_Haze2 {
 SCR_BaseGameMode GameMode_Coop1 : "{986C258C450B9318}Prefabs/MP/Modes/Plain/GameMode_Coop.et" {
  components {
   SCR_ForceTimeAndWeatherComponent "{5970F21329622CEB}" {
-   m_fCustomTimeOfTheDay 20
+   m_fCustomTimeOfTheDay 19.75
   }
   SCR_GameOverScreenManagerComponent "{56DEC646298AD219}" {
    m_GameOverScreenConfig SCR_GameOverScreenConfig "{56DEC6462FFDD82D}" {

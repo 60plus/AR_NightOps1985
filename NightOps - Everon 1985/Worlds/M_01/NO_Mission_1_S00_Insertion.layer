@@ -13,7 +13,7 @@ SCR_FactionControlTriggerEntity trg_TitlePopup {
  SphereRadius 20
  TriggerActivationType "First change"
  PeriodicQueries 1
- UpdatePeriod 10
+ UpdatePeriod 5
  ClassFilter "ChimeraCharacter"
  OnActivate ""\
  ""\

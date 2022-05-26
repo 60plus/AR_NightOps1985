@@ -1,29 +1,11 @@
-CommentEntity S00_comment_00 {
- coords 9263.271 41.073 412.284
+CommentEntity S01_comment_00 {
+ coords 9305.775 48.377 628.056
  angleY -90
- m_Comment "Stage 00 - Insertion"
+ m_Comment "Stage 01 - Road"
  m_Size 5
  m_Color 0.597 1 0.178
  m_FaceCamera 1
  m_VisibleOverall 1
-}
-SCR_FactionControlTriggerEntity trg_TitlePopup {
- coords 9258.517 1.223 410.436
- TriggerShapeType Sphere
- SphereRadius 20
- TriggerActivationType "First change"
- PeriodicQueries 1
- UpdatePeriod 5
- ClassFilter "ChimeraCharacter"
- OnActivate ""\
- ""\
- "		SCR_PopUpNotification.GetInstance().PopupMsg(\"MISSION 2 - Night Operations\", duration: 10);"\
- "		"\
- "		SCR_EntityHelper.DeleteEntityAndChildren(GetGame().GetWorld().FindEntityByName(\"trg_TitlePopup\"));"\
- "		"\
- "	"
- m_sOwnerFactionKey "US"
- m_fFriendlyRatioLimit 1
 }
 $grp SCR_AIGroup : "{000CD338713F2B5A}Prefabs/AI/Groups/Group_Base.et" {
  east_grp_1 {
@@ -79,13 +61,6 @@ $grp SCR_AIGroup : "{000CD338713F2B5A}Prefabs/AI/Groups/Group_Base.et" {
     }
    }
   }
- }
-}
-SCR_SpawnPoint SpawnPoint_0 : "{5A2220DD0C16958B}Prefabs/MP/Spawning/SpawnPoint_US.et" {
- coords 9256.124 0.8 410.773
- m_fSpawnRadius 5
- m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
-  Name "Insertion"
  }
 }
 GameEntity : "{D9842C11742C00CF}Prefabs/Props/Civilian/Fireplace_01.et" {

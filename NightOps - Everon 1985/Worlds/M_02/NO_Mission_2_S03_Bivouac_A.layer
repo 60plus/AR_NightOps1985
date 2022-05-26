@@ -7,11 +7,19 @@ CommentEntity S03_comment_00 {
  m_FaceCamera 1
  m_VisibleOverall 1
 }
+SCR_SpawnPoint spawnPoint_3 : "{5A2220DD0C16958B}Prefabs/MP/Spawning/SpawnPoint_US.et" {
+ coords 8743.961 310.22 1732.25
+ m_fSpawnRadius 3
+ m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
+  Name "Bivouac (A)"
+ }
+}
 GenericEntity : "{A6F79DF1121BAE44}Prefabs/Compositions/Slotted/SlotFlatSmall/PlayerHub_S_US_01.et" {
  coords 8734.613 327.168 1732.166
  angleX 1.757
  angleY 0.565
  angleZ -5.568
+ Flags 1026
  {
   GameEntity {
    ID "58C2C1807BFD81B8"
@@ -226,7 +234,7 @@ GenericEntity : "{A6F79DF1121BAE44}Prefabs/Compositions/Slotted/SlotFlatSmall/Pl
    coords 10.795 -17.154 -3.516
    angleY -27.621
   }
-  SCR_SpawnPoint spawnPoint_3 {
+  SCR_SpawnPoint {
    ID "56A49B96A7B02316"
    coords 6.316 -15.734 -7.809
   }

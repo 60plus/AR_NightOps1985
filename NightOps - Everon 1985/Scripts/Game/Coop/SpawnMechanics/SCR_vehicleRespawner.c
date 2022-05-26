@@ -1,4 +1,5 @@
 //Custom script by Zeal & Biscuit
+//Can spawn a vehicle at its own position or, when attached to another object, at that object even when it moves
 
 [EntityEditorProps(category: "GameScripted/ScriptWizard", description: "ScriptWizard generated script file.")]
 class SCR_VehicleRespawnerClass : GenericEntityClass
@@ -10,22 +11,15 @@ class SCR_VehicleRespawner : GenericEntity
     [Attribute("", UIWidgets.ResourcePickerThumbnail, desc: "Vehicle prefab to spawn (usual the same)",  params: "et")]
     protected ResourceName m_rnSpawnPrefab;
     
-    [Attribute("", UIWidgets.EditBox, "Spawn entity's name, at which location the new vehicle should be spawned")];
-    protected string m_sSpawnLocationEntityName;
+	[Attribute("10000", UIWidgets.Auto, desc: "Respawn delay in milliseconds (1000 = 1 second")];
+    protected int m_iSpawnDelay;
 	
-	//Attribute for respawn timer needed
-  
-	//To be removed
-    [Attribute("0 0 0", UIWidgets.EditBox, "Offset from spawn entity, that new vehicle should be placed")]
-    protected vector m_vOffsetSpawnPosition;
-	
-	//To be removed
 	[Attribute("1", UIWidgets.CheckBox, "Should the player get a hint notification on respawn?")];
 	bool showHint;
  
-    protected IEntity m_pEntityToSpawnAt;
     protected IEntity m_pLastSpawnedVehicle;
     
+	
     override void EOnInit(IEntity owner)
     {
         if (!GetGame().InPlayMode())
@@ -36,9 +30,6 @@ class SCR_VehicleRespawner : GenericEntity
     
     void QueryLater()
     {
-        m_pEntityToSpawnAt = GetGame().GetWorld().FindEntityByName(m_sSpawnLocationEntityName);
-        if (!m_pEntityToSpawnAt)
-            return;
         
         SpawnVehicle();
     }
@@ -70,13 +61,16 @@ class SCR_VehicleRespawner : GenericEntity
             return false;
         }
     }
+	
     
-    void OnVehicleDeystroyed(IEntity targetEntity)
+  	void OnVehicleDeystroyed(IEntity targetEntity)
     {
         if (m_pLastSpawnedVehicle)
             TryUnregister(m_pLastSpawnedVehicle);
         
-        SpawnVehicle();
+        //SpawnVehicle();
+        // Delay the vehicle spawn, argument should be ms so 5000 = 5s
+        GetGame().GetCallqueue().CallLater(SpawnVehicle, m_iSpawnDelay);
     }
     
     protected void SpawnVehicle()
@@ -92,10 +86,8 @@ class SCR_VehicleRespawner : GenericEntity
         EntitySpawnParams spawnParams = new EntitySpawnParams();
         spawnParams.TransformMode = ETransformMode.WORLD;
 		
-		//Needs an overhaul
 		vector mat[4];
      	GetWorldTransform(mat);
-        mat[3] = mat[3] + m_vOffsetSpawnPosition;
         GetSpawnTransform(spawnParams.Transform);
 		spawnParams.Transform = mat;
  
@@ -117,11 +109,10 @@ class SCR_VehicleRespawner : GenericEntity
     
     protected void GetSpawnTransform(out vector transformMatrix[4])
     {
-		
         vector rotation = vector.Zero;
         vector yawPitchRoll = Vector(rotation[1], rotation[0], rotation[2]);
         Math3D.AnglesToMatrix(rotation, transformMatrix);       
-        transformMatrix[3] = m_pEntityToSpawnAt.GetOrigin();
+        transformMatrix[3] = GetOrigin();
     }
  
     void SCR_VehicleRespawner(IEntitySource src, IEntity parent)

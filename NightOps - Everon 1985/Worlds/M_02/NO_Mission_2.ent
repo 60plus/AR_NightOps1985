@@ -19,18 +19,24 @@ Layer S01_Castle {
 Layer S02_Bivouac_A {
  Index 5
 }
-Layer S03_Antenna_Hill {
+Layer S04_Antenna_Hill {
  Index 6
 }
-Layer S04_Tanks {
+Layer S06_Tanks {
  Index 7
 }
-Layer S05_Bivouac_B {
+Layer S03_Bivouac_B {
  Index 8
 }
-Layer S06_Helos {
+Layer S08_Helos {
  Index 9
 }
-Layer S07_Town {
+Layer S09_Town {
  Index 10
+}
+Layer S07_Bivouac_D {
+ Index 11
+}
+Layer S05_Bivouac_C {
+ Index 12
 }

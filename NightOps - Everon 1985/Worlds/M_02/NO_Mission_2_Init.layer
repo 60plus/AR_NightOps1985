@@ -21,7 +21,7 @@ SCR_BaseGameMode GameMode_Coop1 : "{986C258C450B9318}Prefabs/MP/Modes/Plain/Game
  components {
   SCR_ForceTimeAndWeatherComponent "{5970F21329622CEB}" {
    m_sCustomWeatherId "Clear"
-   m_fCustomTimeOfTheDay 23
+   m_fCustomTimeOfTheDay 4.5
   }
  }
  coords -193.926 0 -126.967
