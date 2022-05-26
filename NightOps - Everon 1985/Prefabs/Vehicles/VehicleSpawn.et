@@ -1,0 +1,43 @@
+Vehicle : "{F649585ABB3706C4}Prefabs/Vehicles/Wheeled/M151A2/M151A2.et" {
+ ID "44EC665ABD2FF04B"
+ components {
+  SCR_GOLMhqVehicleComponent "{596EB6D38423A1AA}" {
+   factionKey "US"
+   m_rnPrefab "{5A2220DD0C16958B}Prefabs/MP/Spawning/SpawnPoint_US.et"
+   m_vSpawnPosition -2 0 0
+  }
+  SCR_VehicleDamageManagerComponent "{141326E9FD94FE40}" {
+   m_fVehicleDestroyDamage 10408.7
+  }
+  ActionsManagerComponent "{C97BE5489221AE18}" {
+   ActionContexts {
+    UserActionContext "{596EB6D2A4C2B6CF}" {
+     UIInfo UIInfo "{596EB6D2BE89767D}" {
+      Name "MHQ"
+     }
+     ContextName "mhqAction"
+     Position PointInfo "{596EB6D22090188C}" {
+     }
+     Radius 4.004
+    }
+   }
+   additionalActions {
+    SCR_GOLMhqAction "{596EB6D280C55109}" {
+     ParentContextList {
+      "mhqAction"
+     }
+     UIInfo UIInfo "{596EB6D26F9A78E2}" {
+      Name "MHQ"
+     }
+    }
+   }
+  }
+ }
+ coords 10244.697 23.707 663.163
+ EOnInit ""\
+ "		/* code here */"\
+ "		//Print(\"================= MARIO TIMR ===========\");"\
+ "		//SCR_WorldPrefabSpawner spawner = SCR_WorldPrefabSpawner.Cast(this.GetChildren());"\
+ "		//spawner.SpawnAsChild();"\
+ "	"
+}
