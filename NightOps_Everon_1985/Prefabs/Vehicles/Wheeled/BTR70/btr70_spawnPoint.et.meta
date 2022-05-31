@@ -1,0 +1,15 @@
+MetaFileClass {
+ Name "{0713A314FA7F76A8}Prefabs/Vehicles/Wheeled/BTR70/btr70_spawnPoint.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

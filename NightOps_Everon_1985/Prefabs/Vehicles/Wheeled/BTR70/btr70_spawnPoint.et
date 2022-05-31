@@ -1,0 +1,14 @@
+Vehicle : "{C012BB3488BEA0C2}Prefabs/Vehicles/Wheeled/BTR70/BTR70.et" {
+ ID "BBCBA43A9778AE21"
+ coords 11486.097 1.844 10893.377
+ {
+  SCR_SpawnPoint spawnPoint_btr : "{5A2220DD0C16958B}Prefabs/MP/Spawning/SpawnPoint_US.et" {
+   ID "597CBB1587DBC45C"
+   coords 6.368 0.001 -5.699
+   m_sFaction "0"
+   m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
+    Name "APC"
+   }
+  }
+ }
+}
