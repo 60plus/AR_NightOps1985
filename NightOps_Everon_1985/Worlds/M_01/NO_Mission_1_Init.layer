@@ -1,0 +1,44 @@
+SCR_AIWorld : "{E0A05C76552E7F58}Prefabs/AI/SCR_AIWorld.et" {
+ components {
+  NavmeshWorldComponent "{5584F30E67F617AD}" {
+   NavmeshSettings NavmeshWorld "{50FC63BEBE3973C5}" {
+    NavmeshFile "{AD5F99CD7C59D5E0}worlds/GameMaster/Navmeshes/GM_Eden.nmn"
+   }
+  }
+ }
+ coords 0 0 0
+}
+GenericWorldFogEntity Fog_Haze2 {
+ coords 22.274 0 -29.957
+ FakeDistFog 1
+ HeightDensity 0.94
+ DistanceDensity 0.362
+ HeightOffset 0
+ Color 0.5 0.5 0.5 0
+ ColorBack 0.4 0.4 0.4 0
+}
+SCR_BaseGameMode GameMode_Coop1 : "{986C258C450B9319}Prefabs/MP/Modes/Coop/GameMode_Coop.et" {
+ components {
+  SCR_ForceTimeAndWeatherComponent "{597D07D7D3ADFE22}" {
+  }
+  SCR_GameOverScreenManagerComponent "{56DEC646298AD219}" {
+   m_GameOverScreenConfig SCR_GameOverScreenConfig "{56DEC6462FFDD82D}" {
+    m_aGameOverScreens {
+     SCR_FactionVictoryGameOverScreenInfo "{568EB6DFEF507060}" {
+      m_OptionalParams SCR_BaseGameOverScreenInfoOptional "{568EB6DFF87D9C84}" {
+       m_sTitle "Flashpoint 1985"
+       m_sSubtitle "Mission Completed"
+      }
+     }
+    }
+   }
+  }
+  SCR_RespawnMenuHandlerComponent "{597B2EF80CE41F6C}" {
+   m_bAllowQuickDeploy 0
+  }
+ }
+ coords 11260.038 0 10572.646
+}
+ScriptedChatEntity ChatEntity : "{F69BC912AC8236F9}Prefabs/MP/ScriptedChatEntity.et" {
+ coords -168.601 -8.693 -158.253
+}

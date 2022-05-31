@@ -1,0 +1,230 @@
+CommentEntity comment_06 {
+ coords 10901.53 43.94 11723.8
+ angleY -90
+ m_Comment "Stage 06 - Town"
+ m_Size 2
+ m_Color 0.594 1 0.176
+ m_FaceCamera 1
+ m_VisibleOverall 1
+}
+SCR_BaseTriggerEntity east_killed_comTruck_trg {
+ coords 10908.546 23.857 11738.684
+ userScript "	override bool ScriptedEntityFilterForQuery(IEntity ent)"\
+ "    {"\
+ "        Vehicle vehicle = Vehicle.Cast(ent);"\
+ "        if (!vehicle) return false; // Not a vehicle"\
+ "        "\
+ "        SCR_IdentifierComponent idComponent = SCR_IdentifierComponent.Cast(ent.FindComponent(SCR_IdentifierComponent));"\
+ "        "\
+ "        if (!idComponent || idComponent.GetIdentifier() != \"comTruck\")"\
+ "            return false;"\
+ "        "\
+ "        SCR_VehicleDamageManagerComponent damageComponent = SCR_VehicleDamageManagerComponent.Cast(ent.FindComponent(SCR_VehicleDamageManagerComponent));"\
+ "        if (!damageComponent) return false; // No component"\
+ "        "\
+ "        return damageComponent.IsDestroyed(); // Activate only if deystroyed"\
+ "    }"\
+ ""\
+ "    override void OnActivate(IEntity ent)"\
+ "    {"\
+ "       SCR_PopUpNotification.GetInstance().PopupMsg(\"COM TRUCK LOST\", duration: 5);"\
+ "		"\
+ "		SCR_BaseGameMode gameMode = SCR_BaseGameMode.Cast(GetGame().GetGameMode()); // Get the game mode for the end script"\
+ "        Faction faction = GetGame().GetFactionManager().GetFactionByKey(\"USSR\"); // Get the winning faction Key"\
+ "        int usIndex = GetGame().GetFactionManager().GetFactionIndex(faction); // Get the winning faction key's index"\
+ "        gameMode.EndGameMode(SCR_GameModeEndData.CreateSimple(SCR_GameModeEndData.ENDREASON_EDITOR_FACTION_VICTORY, -1, usIndex)); // End the mission!"\
+ "    }"
+ TriggerShapeType Sphere
+ SphereRadius 10
+ TriggerActivationType "All changes"
+ PeriodicQueries 1
+}
+$grp GenericEntity : "{78A930FB0825AA9F}Prefabs/Compositions/Misc/SubCompositions/Sandbag_Camo_long_high_USSR.et" {
+ {
+  coords 11007.323 22.286 11781.946
+  angleY -52.215
+ }
+ {
+  coords 11005.196 22.081 11779.22
+  angleY -52.215
+ }
+ {
+  coords 11009.685 22.487 11784.485
+  angleY -52.215
+ }
+ {
+  coords 11002.827 22.005 11776.458
+  angleY -52.215
+ }
+}
+$grp RLC_SpawnTrigger : "{C8AE586E0B9D4280}Prefabs/MP/Triggers/RLC_SpawnTrigger.et" {
+ east_spawn_comTruck_trg {
+  coords 10907.929 24.195 11737.817
+  SphereRadius 0
+  TriggerActivationType None
+  PeriodicQueries 0
+  {
+   GenericEntity east_veh_comTruck : "{953607E56D14C391}Prefabs/Vehicles/VehicleSpawn.et" {
+    components {
+     SCR_EnvSpawnerComponent "{59795C2CBC44C81E}" {
+      m_rnDefaultPrefab "{001380F74524C82C}Prefabs/Vehicles/Wheeled/Ural/Ural_ComTruck.et"
+     }
+    }
+    coords -0.511 0.004 0.148
+    angleY 50.408
+   }
+  }
+ }
+ east_spawn_3_trg {
+  coords 10934.81 24.917 11753.245
+  SphereRadius 200
+  m_bDelete 0
+  m_faction "US"
+  {
+   GenericEntity east_grp_12 : "{05B22D516E01E68B}Prefabs/AI/PatrolAiPrefab.et" {
+    components {
+     RLC_AISpawnerComponent "{59795C2DF6D90234}" {
+      m_rnDefaultPrefab "{CB58D90EA14430AD}Prefabs/Groups/OPFOR/Group_USSR_SentryTeam.et"
+     }
+    }
+    coords -60.837 -3.48 -107.231
+    {
+     SCR_AIWaypoint {
+      ID "59795C140C902FCC"
+      coords -33.491 0.05 49.073
+     }
+     SCR_AIWaypoint {
+      ID "59795C140C902FCD"
+      coords 7.475 1.601 9.583
+     }
+     SCR_AIWaypoint {
+      ID "59795C140C904619"
+      coords 84.271 5.728 -37.13
+     }
+     SCR_AIWaypoint {
+      ID "59795C140C93C611"
+      coords 15.523 1.742 0.598
+     }
+    }
+   }
+   $grp GenericEntity : "{562588DFB029F654}Prefabs/Vehicles/HouseSpawn.et" {
+    east_obj_3 {
+     components {
+      SCR_EnvSpawnerComponent "{59795C2CBC44C81E}" {
+       m_rnDefaultPrefab "{2A3B53114DEAA60A}Prefabs/Compositions/Slotted/SlotFlatSmall/Headquarters_S_USSR_01.et"
+      }
+     }
+     coords -49.491 -1.918 11.686
+     angleY -138.819
+    }
+    east_obj_1 {
+     components {
+      SCR_EnvSpawnerComponent "{59795C2CBC44C81E}" {
+       m_rnDefaultPrefab "{114DE81321786CD9}Prefabs/Compositions/Slotted/SlotFlatSmall/MachineGunNest_S_USSR_01_PKM.et"
+      }
+     }
+     coords 45.154 0.097 -71.749
+     angleY 100.046
+    }
+    east_obj_2 {
+     components {
+      SCR_EnvSpawnerComponent "{59795C2CBC44C81E}" {
+       m_rnDefaultPrefab "{114DE81321786CD9}Prefabs/Compositions/Slotted/SlotFlatSmall/MachineGunNest_S_USSR_01_PKM.et"
+      }
+     }
+     coords 7.029 -1.608 49.785
+     angleY 39.198
+    }
+    east_obj_4 {
+     components {
+      SCR_EnvSpawnerComponent "{59795C2CBC44C81E}" {
+       m_rnDefaultPrefab "{73C2A7008B434B5C}Prefabs/Compositions/Misc/SubCompositions/CanvasCover_Cluttered_USSR_03.et"
+      }
+     }
+     coords -42.188 -0.019 -29.319
+     angleY 132.674
+    }
+   }
+   $grp SCR_DefendWaypoint : "{93B8DB545D91C857}Prefabs/AI/StandStillAiPrefab.et" {
+    east_grp_10_defWP {
+     coords 70.047 -1.554 31.354
+     CompletionRadius 60
+     {
+      GenericEntity east_grp_10 {
+       ID "59795C1406207106"
+       components {
+        RLC_AISpawnerComponent "{59795C2DF6D90234}" {
+         m_rnDefaultPrefab "{96BAB56E6558788E}Prefabs/Groups/OPFOR/Group_USSR_Team_AT.et"
+        }
+       }
+      }
+     }
+    }
+    east_grp_11_defWP {
+     coords -5.083 -1.398 46.289
+     CompletionRadius 125
+     {
+      GenericEntity east_grp_11 {
+       ID "59795C1406207106"
+       components {
+        RLC_AISpawnerComponent "{59795C2DF6D90234}" {
+         m_rnDefaultPrefab "{96BAB56E6558788E}Prefabs/Groups/OPFOR/Group_USSR_Team_AT.et"
+        }
+       }
+      }
+     }
+    }
+    east_grp_8_defWP {
+     coords -30.037 -0.296 -28.293
+     CompletionRadius 75
+     {
+      GenericEntity east_grp_8 {
+       ID "59795C1406207106"
+       components {
+        RLC_AISpawnerComponent "{59795C2DF6D90234}" {
+         m_rnDefaultPrefab "{E552DABF3636C2AD}Prefabs/Groups/OPFOR/Group_USSR_RifleSquad.et"
+        }
+       }
+      }
+     }
+    }
+    east_grp_9_defWP {
+     coords 47.036 -0.166 -78.926
+     CompletionRadius 75
+     {
+      GenericEntity east_grp_9 {
+       ID "59795C1406207106"
+       components {
+        RLC_AISpawnerComponent "{59795C2DF6D90234}" {
+         m_rnDefaultPrefab "{96BAB56E6558788E}Prefabs/Groups/OPFOR/Group_USSR_Team_AT.et"
+        }
+       }
+      }
+     }
+    }
+   }
+   $grp GenericEntity : "{953607E56D14C391}Prefabs/Vehicles/VehicleSpawn.et" {
+    east_veh_6 {
+     coords -41.878 -1.133 -0.786
+     angleY -178.938
+    }
+    east_veh_7 {
+     components {
+      SCR_EnvSpawnerComponent "{59795C2CBC44C81E}" {
+       m_rnDefaultPrefab "{C012BB3488BEA0C2}Prefabs/Vehicles/Wheeled/BTR70/BTR70.et"
+      }
+     }
+     coords -71.664 -2.675 3.33
+    }
+   }
+  }
+ }
+}
+GameEntity : "{D9842C11742C00CF}Prefabs/Props/Civilian/Fireplace_01.et" {
+ components {
+  SCR_FireplaceComponent "{5876E7F288BF5C8E}" {
+   m_eInitialLightState LIT
+  }
+ }
+ coords 10999.407 22.639 11785.5
+}

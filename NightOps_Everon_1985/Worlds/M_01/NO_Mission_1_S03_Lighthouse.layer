@@ -1,0 +1,69 @@
+CommentEntity S03_comment_00 {
+ coords 11388.217 84.979 11199.463
+ angleY -90
+ m_Comment "Stage 03 - Lighthouse"
+ m_Size 2
+ m_Color 0.597 1 0.178
+ m_FaceCamera 1
+ m_VisibleOverall 1
+}
+SCR_AIGroup east_grp_3 : "{000CD338713F2B5A}Prefabs/AI/Groups/Group_Base.et" {
+ components {
+  AIBehaviorTreeComponent "{13BAA835864B8992}" {
+  }
+ }
+ coords 11379.533 69.71 11191.641
+ m_faction "USSR"
+ m_aUnitPrefabSlots {
+  "{DCB41B3746FDD1BE}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_Rifleman.et" "{96C784C502AC37DA}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_MG.et" "{1C78331E156A3D65}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_AT.et" "{612F43A4D5AE765F}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_RTO.et" "{976AC400219898FA}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_Sharpshooter.et" "{8E0FE664CE7D1CA9}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_GL.et"
+ }
+ m_aStaticWaypoints {
+  "east_grp_3_wp_1"
+ }
+ {
+  SCR_DefendWaypoint east_grp_3_wp_1 : "{93291E72AC23930F}Prefabs/AI/Waypoints/AIWaypoint_Defend.et" {
+   coords 3.807 -0.053 1.302
+   CompletionRadius 75
+  }
+ }
+}
+Vehicle east_veh_3 : "{4597626AF36C0858}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320.et" {
+ components {
+  EventHandlerManagerComponent "{52CAB06F9C274D14}" {
+   EventHandlers {
+   }
+  }
+  SCR_VehicleDamageManagerComponent "{141326E9FD94FE40}" {
+   m_fVehicleDestroyDamage 21809.699
+  }
+ }
+ coords 11374.511 69.254 11194.383
+ angleY -58.256
+}
+SCR_SpawnPoint spawnPoint_1 : "{5A2220DD0C16958B}Prefabs/MP/Spawning/SpawnPoint_US.et" {
+ coords 11386.046 69.406 11193.371
+ m_fSpawnRadius 3
+ m_sFaction "0"
+ m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
+  Name "Lighthouse"
+ }
+}
+GenericEntity : "{76153B97A551AADE}Prefabs/Systems/Arsenal/AmmoBoxes/USSR/AmmoBoxArsenal_Explosives_USSR.et" {
+ coords 11382.074 69.407 11196.593
+}
+GenericEntity : "{7A32336CED936A26}Prefabs/Compositions/Misc/SubCompositions/CanvasCover_Cluttered_USSR_01.et" {
+ coords 11378.735 69.407 11186.321
+ angleY 0
+}
+GenericEntity : "{7C93700E1AC4C388}Prefabs/Systems/Arsenal/AmmoBoxes/USSR/AmmoBoxArsenal_Launcher_USSR.et" {
+ coords 11382.063 69.407 11198.094
+ angleY 88.614
+}
+GameEntity : "{D9842C11742C00CF}Prefabs/Props/Civilian/Fireplace_01.et" {
+ components {
+  SCR_FireplaceComponent "{5876E7F288BF5C8E}" {
+   m_eInitialLightState LIT
+  }
+ }
+ coords 11391.887 69.406 11190.097
+}

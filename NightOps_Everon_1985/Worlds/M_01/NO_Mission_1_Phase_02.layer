@@ -1,0 +1,136 @@
+$grp CommentEntity {
+ comment_05 {
+  coords 11140.602 46.698 11589.938
+  angleY -90
+  Flags 2
+  m_Comment "Stage 05 - Radiopost"
+  m_Size 2
+  m_Color 0.597 1 0.178
+  m_FaceCamera 1
+  m_VisibleOverall 1
+ }
+ comment_04 {
+  coords 11383.477 20.785 11841.511
+  angleY -90
+  Flags 2
+  m_Comment "Stage 04 - Farm"
+  m_Size 2
+  m_Color 0.597 1 0.178
+  m_FaceCamera 1
+  m_VisibleOverall 1
+ }
+}
+SCR_SpawnPoint spawnPoint_2 : "{5A2220DD0C16958B}Prefabs/MP/Spawning/SpawnPoint_US.et" {
+ coords 11149.542 33.629 11599.023
+ m_fSpawnRadius 3
+ m_sFaction "0"
+ m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
+  Name "Radiopost"
+ }
+}
+GenericEntity : "{68ED84218EA1BDC2}Prefabs/Compositions/Slotted/SlotFlatSmall/Antenna_S_USSR_01.et" {
+ coords 11160.849 33.522 11590.993
+ angleY -100.478
+}
+RLC_SpawnTrigger east_spawn_2_trg : "{C8AE586E0B9D4280}Prefabs/MP/Triggers/RLC_SpawnTrigger.et" {
+ coords 11136.548 34.073 11524.136
+ SphereRadius 0
+ TriggerActivationType None
+ PeriodicQueries 0
+ m_bDelete 0
+ {
+  $grp GenericEntity : "{78E00EC5CC7C7763}Prefabs/AI/PatrolAiWithoutCycle.et" {
+   east_grp_5 {
+    components {
+     RLC_AISpawnerComponent "{59795C2DF6D90234}" {
+      m_rnDefaultPrefab "{E552DABF3636C2AD}Prefabs/Groups/OPFOR/Group_USSR_RifleSquad.et"
+     }
+    }
+    coords -110.289 -10.797 -63.879
+    {
+     SCR_AIWaypoint east_grp_5_move1WP {
+      ID "597B3BA8060998E2"
+      coords 171.463 20.127 -229.551
+      AIBehaviorTreeMoveTo "{A3755C1F88DED8D6}AI/BehaviorTrees/Waypoints/WP_Move.bt"
+     }
+     SCR_AIWaypoint east_grp_5_move2WP {
+      ID "597B3BA80609B370"
+      coords 315.4 39.159 -230.05
+      AIBehaviorTreeMoveTo "{A3755C1F88DED8D6}AI/BehaviorTrees/Waypoints/WP_Move.bt"
+     }
+    }
+   }
+   east_grp_6 {
+    components {
+     RLC_AISpawnerComponent "{59795C2DF6D90234}" {
+      m_rnDefaultPrefab "{96BAB56E6558788E}Prefabs/Groups/OPFOR/Group_USSR_Team_AT.et"
+     }
+    }
+    coords 73.141 -1.933 50.481
+    {
+     SCR_AIWaypoint east_grp_6_move1WP {
+      ID "597B3BA8060998E2"
+      coords 174.968 7.449 -97.991
+      AIBehaviorTreeMoveTo "{A3755C1F88DED8D6}AI/BehaviorTrees/Waypoints/WP_Move.bt"
+     }
+     SCR_AIWaypoint east_grp_6_move2WP {
+      ID "597B3BA80609B370"
+      coords 155.938 35.529 -373.922
+      AIBehaviorTreeMoveTo "{A3755C1F88DED8D6}AI/BehaviorTrees/Waypoints/WP_Move.bt"
+     }
+    }
+   }
+  }
+  $grp SCR_DefendWaypoint : "{93B8DB545D91C857}Prefabs/AI/StandStillAiPrefab.et" {
+   east_grp_4_defWP {
+    coords 249.026 -16.791 316.259
+    CompletionRadius 50
+    {
+     GenericEntity east_grp_4 {
+      ID "59795C1406207106"
+      components {
+       RLC_AISpawnerComponent "{59795C2DF6D90234}" {
+        m_rnDefaultPrefab "{96BAB56E6558788E}Prefabs/Groups/OPFOR/Group_USSR_Team_AT.et"
+        m_bSpawnImmediately 1
+       }
+      }
+      coords 7.581 0 0
+     }
+    }
+   }
+   east_grp_7_defWP {
+    coords 3.256 -0.094 74.086
+    CompletionRadius 75
+    {
+     GenericEntity east_grp_7 {
+      ID "59795C1406207106"
+      components {
+       RLC_AISpawnerComponent "{59795C2DF6D90234}" {
+        m_rnDefaultPrefab "{96BAB56E6558788E}Prefabs/Groups/OPFOR/Group_USSR_Team_AT.et"
+        m_bSpawnImmediately 1
+       }
+      }
+      coords 9.411 0 -3.858
+     }
+    }
+   }
+  }
+  GenericEntity east_veh_4 : "{953607E56D14C391}Prefabs/Vehicles/VehicleSpawn.et" {
+   components {
+    SCR_EnvSpawnerComponent "{59795C2CBC44C81E}" {
+     m_rnDefaultPrefab "{0713A314FA7F76A8}Prefabs/Vehicles/Wheeled/BTR70/btr70_spawnPoint.et"
+    }
+   }
+   coords 236.138 -16.872 307.737
+   angleY 57.051
+  }
+ }
+}
+GameEntity : "{D9842C11742C00CF}Prefabs/Props/Civilian/Fireplace_01.et" {
+ components {
+  SCR_FireplaceComponent "{5876E7F288BF5C8E}" {
+   m_eInitialLightState LIT
+  }
+ }
+ coords 11390.048 17.312 11840.387
+}

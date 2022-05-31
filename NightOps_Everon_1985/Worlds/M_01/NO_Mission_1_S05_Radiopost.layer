@@ -1,0 +1,76 @@
+CommentEntity S05_comment {
+ coords 11140.602 46.698 11589.938
+ angleY -90
+ Flags 2
+ m_Comment "Stage 05 - Radiopost"
+ m_Size 2
+ m_Color 0.597 1 0.178
+ m_FaceCamera 1
+ m_VisibleOverall 1
+}
+SCR_BaseTriggerEntity east_grp_5_trg : "{3F294A5E2B52B65E}Prefabs/MP/Triggers/CoopTriggerSpawner.et" {
+ components {
+  SCR_AISpawnerComponent "{5966F2A840D93A01}" {
+   m_rnDefaultPrefab "{96BAB56E6558788E}Prefabs/Groups/OPFOR/Group_USSR_Team_AT.et"
+   m_vSpawnPosition 11117.644 35.878 11577.163
+   m_vSpawnRotation 0 87 0
+   m_aWaypointsList {
+    "east_grp_5_wp_1"
+   }
+  }
+  SCR_AISpawnerComponent "{5968BAC9353FDA06}" {
+   m_rnDefaultPrefab "{96BAB56E6558788E}Prefabs/Groups/OPFOR/Group_USSR_Team_AT.et"
+   m_bUseTrigger 1
+   m_vSpawnPosition 11021.791 23.567 11458.632
+   m_aWaypointsList {
+    "east_grp_5_wp_1"
+   }
+  }
+  SCR_AISpawnerComponent "{596B54A4048760E8}" {
+   m_rnDefaultPrefab "{CB58D90EA14430AD}Prefabs/Groups/OPFOR/Group_USSR_SentryTeam.et"
+   m_bUseTrigger 1
+   m_vSpawnPosition 11136.427 35.878 11610.856
+   m_aWaypointsList {
+    "east_grp_5_wp_2"
+   }
+  }
+ }
+ coords 10820.223 -10.682 11160.776
+ angleY -8.576
+ TriggerShapeType "Oriented Bounding Box"
+ SphereRadius 100
+ BoxMaxs 1000 100 50
+ UpdatePeriod 5
+ {
+  CommentEntity S05_comment_01 {
+   coords 387 96.575 5.933
+   angleY -67.065
+   m_Comment "S05 Triggerline"
+   m_Size 5
+   m_Color 0.43 0.415 1
+   m_FaceCamera 1
+   m_VisibleOverall 1
+  }
+  SCR_AIWaypoint east_grp_5_wp_1 : "{750A8D1695BD6998}Prefabs/AI/Waypoints/AIWaypoint_Move.et" {
+   coords 530.551 72.754 -31.216
+   angleY 22.935
+  }
+  SCR_DefendWaypoint east_grp_5_wp_2 : "{93291E72AC23930F}Prefabs/AI/Waypoints/AIWaypoint_Defend.et" {
+   coords 388.599 45.034 378.609
+   angleY 8.576
+   CompletionRadius 50
+  }
+ }
+}
+SCR_SpawnPoint spawnPoint_3 : "{5A2220DD0C16958B}Prefabs/MP/Spawning/SpawnPoint_US.et" {
+ coords 11149.542 33.629 11599.023
+ m_fSpawnRadius 3
+ m_sFaction "0"
+ m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
+  Name "Radiopost"
+ }
+}
+GenericEntity : "{68ED84218EA1BDC2}Prefabs/Compositions/Slotted/SlotFlatSmall/Antenna_S_USSR_01.et" {
+ coords 11160.849 33.522 11590.993
+ angleY -100.478
+}
