@@ -1,0 +1,8 @@
+GameProject {
+ ID "NightOpsEveron1985"
+ GUID "596338F447D34E39"
+ TITLE "NightOps - Everon 1985"
+ Dependencies {
+  "58D0FB3206B6F859"
+ }
+}
