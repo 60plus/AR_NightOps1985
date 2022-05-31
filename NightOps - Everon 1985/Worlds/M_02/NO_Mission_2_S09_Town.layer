@@ -1,9 +1,0 @@
-CommentEntity S09_comment_00 {
- coords 5135.532 38.787 4023.943
- angleY -90
- m_Comment "Stage 09 - Town"
- m_Size 5
- m_Color 0.597 1 0.178
- m_FaceCamera 1
- m_VisibleOverall 1
-}
